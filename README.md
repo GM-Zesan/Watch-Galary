@@ -1,4 +1,4 @@
 # Watch galary
 
-live-link: [Create React App](https://github.com/facebook/create-react-app).
+live-link: [Watch-Galary](https://darling-mandazi-a84691.netlify.app/).
 
