@@ -73,8 +73,8 @@ const Home = () => {
             </header>
             <main>
                 <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-md-8">
+                    <div className="row mb-5">
+                        <div className="col-12 col-md-9">
                             <div className="row row-cols-1 row-cols-md-3 g-4">
                                 {product.map((item, index) => (
                                     <Card
@@ -85,18 +85,21 @@ const Home = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="col-12 col-md-4">
+                        <div className="col-12 col-md-3 px-5 cart-item py-5">
+                            <h5 className="text-center mb-4">Selected Item !</h5>
                             {cart.map((cart, index) => (
                                 <CartItem key={index} cart={cart}></CartItem>
                             ))}
+
                             <div>
                                 {cart.length > 0 && (
                                     <>
+                                        <hr />
                                         <button
-                                            className="btn btn-primary"
+                                            className="btn btn-primary mt-2"
                                             onClick={handdleRandom}
                                         >
-                                            Choose Random Watch
+                                            Choose Randomly
                                         </button>
                                         <button
                                             className="btn btn-danger d-block mt-3"

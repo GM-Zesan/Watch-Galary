@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "name": "Havit HV-M9006",
-        "image": "https://i.ibb.co/DGdgVFY/1.jpg",
+        "name": "TIMEX TWEG18405",
+        "image": "https://i.ibb.co/ZSjw18g/11.jpg",
         "price": 2760
     },
     {
@@ -13,20 +13,20 @@
     },
     {
         "id": 3,
-        "name": "Xiaomi Haylou RT2 LS10",
+        "name": "Xiaomi RT2 LS10",
         "image": "https://i.ibb.co/Tb7Yvcn/3.jpg",
         "price": 2380
     },
     {
         "id": 4,
-        "name": "Realme DIZO Watch 2",
-        "image": "https://i.ibb.co/09MD29x/4.webp",
+        "name": "Realme DIZO 2",
+        "image": "https://i.ibb.co/L8j5b6G/5.jpg",
         "price": 3120
     },
     {
         "id": 5,
         "name": "Rolex Cellini",
-        "image": "https://i.ibb.co/L8j5b6G/5.jpg",
+        "image": "https://i.ibb.co/3Bf5VPj/9.jpg",
         "price": 3500
     },
     {
