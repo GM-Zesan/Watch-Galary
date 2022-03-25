@@ -2,29 +2,35 @@ import React, { useEffect, useState } from "react";
 import Card from "../../components/card/Card";
 import Header from "../../components/header/Header";
 import "./Home.css";
+import { ToastContainer, toast } from "react-toastify";
 const Home = () => {
     const [product, setProduct] = useState([]);
     const [cart, setCart] = useState([]);
-    const [isDilicate, setDublicate] = useState(false);
-    
+
     //handleAddtoCart
     const handleAddtoCart = (id) => {
         if (cart.length) {
+        if(cart.length === 4){
+            toast.error('Overflow');
+        }else{
             const isDublicate = cart.find((item) => item.id === id);
             if (isDublicate) {
-                setDublicate(true);
+                toast.error("Already Added!");
             } else {
-                setDublicate(false);
                 const cartItem = product.find((item) => item.id === id);
                 const newCart = [...cart, cartItem];
+                toast.success("Add to cart");
                 setCart(newCart);
             }
+        } 
         } else {
             const cartItem = product.find((item) => item.id === id);
             const newCart = [...cart, cartItem];
+            toast.success("Add to cart");
             setCart(newCart);
         }
     };
+
 
     //useEffect
     useEffect(() => {
@@ -55,6 +61,7 @@ const Home = () => {
                     </div>
                 </div>
             </main>
+            <ToastContainer />
         </div>
     );
 };
