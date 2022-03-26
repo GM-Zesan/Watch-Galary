@@ -26,7 +26,7 @@ const Home = () => {
                 const isDublicate = cart.find((item) => item.id === id);
                 if (isDublicate) {
                     toast.error("Already Added!", {
-                        position: "bottom-left",
+                    position: "bottom-left",
                     });
                 } else {
                     const cartItem = product.find((item) => item.id === id);
@@ -65,7 +65,7 @@ const Home = () => {
         fetch("product.JSON")
             .then((res) => res.json())
             .then((data) => setProduct(data));
-    }, []);
+    },[]);
     return (
         <div>
             <header>
@@ -86,7 +86,9 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-12 col-md-3 px-5 cart-item py-5">
-                            <h5 className="text-center mb-4">Selected Item !</h5>
+                            <h5 className="text-center mb-4">
+                                Selected Item !
+                            </h5>
                             {cart.map((cart, index) => (
                                 <CartItem key={index} cart={cart}></CartItem>
                             ))}
@@ -99,7 +101,7 @@ const Home = () => {
                                             className="btn btn-primary mt-2"
                                             onClick={handdleRandom}
                                         >
-                                            Choose Randomly
+                                            Choose 1 Randomly
                                         </button>
                                         <button
                                             className="btn btn-danger d-block mt-3"
@@ -115,6 +117,7 @@ const Home = () => {
                                     onHide={handleClose}
                                     backdrop="static"
                                     keyboard={false}
+                                    dialogClassName="my-modal"
                                 >
                                     <Modal.Header closeButton>
                                         <Modal.Title>
@@ -122,12 +125,15 @@ const Home = () => {
                                         </Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
-                                        <img
-                                            src={randomProduct?.image}
-                                            className="img-fluid"
-                                            style={{ width: "400px" }}
-                                            alt=""
-                                        />
+                                        <div>
+                                            <img
+                                                src={randomProduct?.image}
+                                                className="img-fluid"
+                                                style={{ width: "300px" }}
+                                                alt="..."
+                                            />
+                                        </div>
+                                        <h5>Tk {randomProduct?.price}</h5>
                                     </Modal.Body>
                                     <Modal.Footer>
                                         <Button
@@ -141,6 +147,27 @@ const Home = () => {
                                 {/* modal area end */}
                             </div>
                         </div>
+                    </div>
+                    <div className="mb-5">
+                        <h4>
+                            1. What are the differences between props and state ?
+                        </h4>
+                        <p>
+                            <strong>Props : </strong>
+                            Props are used to pass data. By Props Data is passed
+                            from one component to another.Data from props is
+                            read-only, and cannot be modified. <br />
+                            <strong>State : </strong>
+                            By State Data is passed within the component only.
+                            State can be managed or modified data.
+                        </p>
+                        <h4>2. How does useState works?</h4>
+                        <p>
+                            <strong>useState </strong> function is a built in
+                            hook that can be imported from the react package. It
+                            allows us to add state to our functional components.
+                            It also allows us to perform side effects in your components. We can pass here the initial state to this function. And it returns a variable with the current state value.
+                        </p>
                     </div>
                 </div>
             </main>
