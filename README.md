@@ -1,4 +1,4 @@
 # Watch galary
 
-live-link: [Watch-Galary](https://darling-mandazi-a84691.netlify.app/).
+live-link: [Watch-Galary](https://watch-galary-a84691.netlify.app/).
 
